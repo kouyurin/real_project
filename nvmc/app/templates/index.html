@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}整備内容通知票{% endblock %}
+
+{% block Navbar %}
+<!-- Create Navbar -->
+<nav class="navbar navbar-expand-lg navbar-transparent bg-primary navbar-absolute">
+    <div class="container-fluid">
+        <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+                <button type="button" class="navbar-toggler">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+            <a class="navbar-brand" href="{% url 'app:index' %}">通知票一覧</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <form>
+                <div class="form-group">
+                    <select class="form-control" id="navigation">
+                        <option value="">通知票番号選択</option>
+                        <option value="220514-004-00">220514-004-00</option>
+                        <option value="220514-024-00">220514-024-00</option>
+                    </select>
+                </div>
+            </form>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="now-ui-icons users_single-02"></i>
+                        <p>
+                            <span class="d-lg-none d-md-block">ログイン</span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->
+{% endblock %}
+{% block contents %}
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-chart">
+                <div class="card-header">
+                    <h5 class="card-title">処置待ち</h5>
+                </div>
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card card-chart">
+                <div class="card-header">
+                    <h5 class="card-title">PC確認待ち</h5>
+                </div>
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card card-chart">
+                <div class="card-header">
+                    <h5 class="card-title">リーダー・主任待ち</h5>
+                </div>
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
